@@ -1,0 +1,20 @@
+{
+  "name": "gyraplus-test-chat-api",
+  "version": "0.0.1",
+  "description": "A web chat REST API for the GYRA+ test/challenge.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": "https://github.com/marcoonroad/gyramais-test.git",
+  "author": "Marco Aurélio da Silva <marcoonroad@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "cuid": "2.1.6",
+    "express": "4.17.1",
+    "moment": "2.24.0",
+    "mongodb": "3.3.2"
+  }
+}

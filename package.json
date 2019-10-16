@@ -1,0 +1,16 @@
+{
+  "name": "gyraplus-test-chat",
+  "version": "0.0.1",
+  "engines": {
+    "yarn": "1.x"
+  },
+  "description": "Test/challenge project of a chat API for GYRA+ interview process.",
+  "scripts": {
+    "install": "cd api && yarn",
+    "start": "cd api && yarn start"
+  },
+  "repository": "https://github.com/marcoonroad/gyramais-test.git",
+  "author": "Marco Aurélio da Silva <marcoonroad@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
