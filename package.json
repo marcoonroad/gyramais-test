@@ -7,7 +7,8 @@
   "description": "Test/challenge project of a chat API for GYRA+ interview process.",
   "scripts": {
     "install": "cd api && yarn",
-    "start": "cd api && yarn start"
+    "start": "cd api && yarn start",
+    "watch": "cd api && yarn watch"
   },
   "repository": "https://github.com/marcoonroad/gyramais-test.git",
   "author": "Marco Aurélio da Silva <marcoonroad@gmail.com>",

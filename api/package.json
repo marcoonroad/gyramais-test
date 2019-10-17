@@ -4,7 +4,9 @@
   "description": "A web chat REST API for the GYRA+ test/challenge.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/index.js",
+    "watch": "nodemon --watch src src/index.js",
+    "lint": "standard"
   },
   "repository": "https://github.com/marcoonroad/gyramais-test.git",
   "author": "Marco Aurélio da Silva <marcoonroad@gmail.com>",
@@ -16,5 +18,11 @@
     "express": "4.17.1",
     "moment": "2.24.0",
     "mongodb": "3.3.2"
+  },
+  "devDependencies": {
+    "axios": "0.19.0",
+    "jest": "24.9.0",
+    "nodemon": "1.19.4",
+    "standard": "14.3.1"
   }
 }
