@@ -2,8 +2,9 @@
   "name": "gyraplus-test-chat-api",
   "version": "0.0.1",
   "description": "A web chat REST API for the GYRA+ test/challenge.",
-  "main": "server.js",
+  "main": "src/index.js",
   "scripts": {
+    "deploy": "git push heroku master",
     "start": "node src/index.js",
     "watch": "nodemon --watch src src/index.js",
     "lint": "standard"
@@ -17,7 +18,8 @@
     "cuid": "2.1.6",
     "express": "4.17.1",
     "moment": "2.24.0",
-    "mongodb": "3.3.2"
+    "mongodb": "3.3.2",
+    "spadille": "0.0.1"
   },
   "devDependencies": {
     "axios": "0.19.0",

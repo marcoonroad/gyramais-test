@@ -2,72 +2,51 @@
 
 const model = require('./model')
 
-const listMessages = async (req, res) => {
+const listMessages = async (req, res, next) => {
   try {
     const { author, sinceDate, untilDate } = req.query
     const messages = await model.listMessages({ author, sinceDate, untilDate })
 
     res.status(200).json(messages)
   } catch (reason) {
-    console.error(reason)
-
-    if (reason.validationError) {
-      res.status(400).json({ error: reason.message })
-    } else {
-      res.status(500).json({ error: 'Failed to list messages!' })
-    }
+    next(reason)
   }
 }
 
-const sendMessage = async (req, res) => {
+const sendMessage = async (req, res, next) => {
   try {
     const message = req.body
-    const result = await model.sendMessage(message)
+    const { nickname, secret } = req.query
+    const result = await model.sendMessage(message, { nickname, secret })
 
     res.status(201).json(result)
   } catch (reason) {
-    console.error(reason)
-
-    if (reason.validationError) {
-      res.status(400).json({ error: reason.message })
-    } else {
-      res.status(500).json({ error: 'Failed to send message!' })
-    }
+    next(reason)
   }
 }
 
-const editMessage = async (req, res) => {
+const editMessage = async (req, res, next) => {
   try {
     const id = req.params.id
     const changes = req.body
-    const result = await model.editMessage(id, changes)
+    const { nickname, secret } = req.query
+    const result = await model.editMessage(id, changes, { nickname, secret })
 
     res.status(200).json(result)
   } catch (reason) {
-    console.error(reason)
-
-    if (reason.validationError) {
-      res.status(400).json({ error: reason.message })
-    } else {
-      res.status(500).json({ error: 'Failed to edit message!' })
-    }
+    next(reason)
   }
 }
 
-const excludeMessage = async (req, res) => {
+const excludeMessage = async (req, res, next) => {
   try {
     const id = req.params.id
-    const result = await model.excludeMessage(id)
+    const { nickname, secret } = req.query
+    const result = await model.excludeMessage(id, { nickname, secret })
 
     res.status(200).json(result)
   } catch (reason) {
-    console.error(reason)
-
-    if (reason.validationError) {
-      res.status(400).json({ error: reason.message })
-    } else {
-      res.status(500).json({ error: 'Failed to exclude message!' })
-    }
+    next(reason)
   }
 }
 

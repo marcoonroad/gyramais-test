@@ -4375,6 +4375,11 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+spadille@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/spadille/-/spadille-0.0.1.tgz#937d8f9dd4706eaa1344cd8337e1a4fdb3864e97"
+  integrity sha512-pbziAkY7JDBbxgo9BvXAfdM23Z1O0EWgCBhr7VCJp8ZhrhGp0sEPzqt/FTfOHSgl53SiiQjS4wNk1WHEmu01Ag==
+
 spdx-correct@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.1.0.tgz#fb83e504445268f154b074e218c87c003cd31df4"
