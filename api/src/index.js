@@ -2,6 +2,7 @@
 
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const helpers = require('./helpers')
 const messages = require('./messages')
 const sessions = require('./sessions')
@@ -9,6 +10,7 @@ const sessions = require('./sessions')
 // middlewares
 const app = express()
 app.use(bodyParser.json())
+app.use(cors())
 
 let server = null
 
