@@ -35,3 +35,16 @@ input[type='text'], input[type='text']:focus {
   border: none !important;
 }
 
+::-webkit-scrollbar {
+  /*
+  width: 0px;
+  background: transparent;
+  */
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+

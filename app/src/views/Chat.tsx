@@ -130,7 +130,7 @@ const Chat : React.FC<IChat> = ({ exitChat }) => {
     }
 
     if (current.messages && current.messages.length) {
-      setTimeout(loadMessages, 5000) // para não sobrecarregar a cota free do Heroku
+      setTimeout(loadMessages, 5000) // para não sobrecarregar o Heroku free que sempre dorme/apaga
     } else {
       loadMessages()
     }
