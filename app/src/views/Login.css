@@ -1,0 +1,30 @@
+.enter-container {
+  min-height: 100vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.enter-input {
+  display: block;
+  padding: 0.5em;
+  width: 95%;
+  text-align: center;
+  margin-bottom: 0.5em;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.enter-button {
+  margin-top: 0.5em;
+  width: 100%;
+  display: block;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+}
+

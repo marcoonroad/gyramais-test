@@ -1,0 +1,26 @@
+/*
+  display: flex;
+  flex-direction: column;
+*/
+
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  background-color: gray;
+}
+
+.app-container {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  max-height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-color: white;
+}
+
