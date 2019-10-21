@@ -11,7 +11,6 @@
     "react-scripts": "3.2.0",
     "react-scrollable-feed": "1.0.4",
     "react-spinkit": "3.0.0",
-    "styled-components": "4.4.0",
     "typescript": "3.6.4"
   },
   "scripts": {
@@ -48,7 +47,6 @@
     "@types/react": "16.9.9",
     "@types/react-dom": "16.9.2",
     "@types/react-spinkit": "3.0.5",
-    "@types/styled-components": "4.1.19",
     "surge": "0.21.3"
   }
 }
