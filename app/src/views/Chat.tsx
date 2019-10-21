@@ -50,12 +50,11 @@ const WriteMessage : React.FC<IWriteMessage> = ({ pushMessage }) => {
     const createdMessage = await Services.messages.send(message)
 
     input.value = ''
-    input.focus()
     pushMessage(createdMessage)
   }
   return (
     <div className='chat-footer'>
-      <input type='text' className='send-input' ref={inputRef} autoFocus />
+      <input type='text' className='send-input' ref={inputRef} />
       <button type='submit' className='send-button' onClick={writeMessageHandler}>{'>>'}</button>
     </div>
   )
