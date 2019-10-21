@@ -2,11 +2,13 @@
 .chat-container {
   width: 100%;
   display: flex;
-  max-height: 100vh;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100) !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: gray;
+  overflow: hidden;
 }
 
 .chat-header {
@@ -20,12 +22,16 @@
   padding-right: 1em;
   text-align: right;
   height: 7vh;
+  height: calc(var(--vh, 1vh) * 7) !important;
+  overflow: hidden;
   top: 0px;
-  position: absolute;
+  position: fixed;
 }
 
 .chat-footer {
   height: 5vh;
+  height: calc(var(--vh, 1vh) * 5) !important;
+  overflow: hidden;
   display: flex;
   /* flex-direction: column; */
   align-items: center;
@@ -34,13 +40,15 @@
   width: 100%;
   padding: 1em;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
 }
 
 .chat-content {
   height: 82vh;
+  height: calc(var(--vh, 1vh) * 82) !important;
   overflow-y: scroll;
+  overflow-x: hidden;
   display: block;
   width: 92%;
   padding: 1em;
@@ -63,6 +71,7 @@
   color: black;
   background-color: white;
   border: none;
+  border-radius: 5px;
 }
 
 .exit-button:hover {
@@ -77,6 +86,8 @@
   background-color: white;
   color: black;
   margin-right: 1em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .send-button:hover {
@@ -89,6 +100,8 @@
   margin: 0;
   padding: 0.5em;
   margin-left: 1em;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .sent-message {
@@ -123,8 +136,8 @@
   max-width: 70%;
   min-width: 30%;
   margin: 0 auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   background-color: black;
   color: white;
   border-radius: 5px;
@@ -132,16 +145,24 @@
   padding: 0.25em;
 }
 
-.message-author {
+.status-message .message-content {
   font-style: italic;
+  font-size: 0.75em;
+}
+
+.message-author {
+  font-weight: bold;
+  font-size: 0.75em;
 }
 
 .message-excluded {
-
+  font-style: italic;
+  font-size: 0.75em;
 }
 
 .message-edited {
-
+  font-style: italic;
+  font-size: 0.75em;
 }
 
 .message-content {
@@ -149,9 +170,10 @@
 }
 
 .message-hour {
-  font-size: 0.8em;
+  font-size: 0.75em;
 }
 
 .message-date {
-  font-size: 0.8em;
+  font-size: 0.75em;
 }
+

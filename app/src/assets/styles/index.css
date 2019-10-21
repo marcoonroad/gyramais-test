@@ -21,3 +21,9 @@ code {
   outline: 1px solid gray;
   outline-offset: 3px;
 }
+
+/* we don't need outline here due blink cursor */
+input[type='text'], input[type='text']:focus {
+  outline: none !important;
+}
+
