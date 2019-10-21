@@ -47,8 +47,7 @@
 .chat-content {
   height: 82vh;
   height: calc(var(--vh, 1vh) * 82) !important;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   display: block;
   width: 92%;
   padding: 1em;
@@ -58,6 +57,11 @@
   position: absolute;
   top: 7vh;
   bottom: 5vh;
+}
+
+.chat-content div:empty {
+  background-color: gray !important;
+  padding: 0;
 }
 
 /* components */

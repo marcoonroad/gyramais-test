@@ -27,3 +27,11 @@ input[type='text'], input[type='text']:focus {
   outline: none !important;
 }
 
+.no-outline {
+  outline: none !important;
+}
+
+.no-border {
+  border: none !important;
+}
+

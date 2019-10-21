@@ -1,5 +1,7 @@
 import React from 'react'
 import moment from 'moment'
+import Spinner from 'react-spinkit'
+import ScrollableFeed from 'react-scrollable-feed'
 import Services from '../services'
 import './Chat.css'
 
@@ -70,7 +72,7 @@ const plotMessage = (currentUser : string) => (message : any) => {
     const excludedLabel = message.excluded ? ', excluded' : ''
 
     return (
-      <li className={className} key={message._id}>
+      <div className={className} key={message._id}>
         <span className='message-author'>{sameUser ? 'You' : message.author}</span>
         {editedLabel ? (<span className='message-edited'>{editedLabel}</span>) : null}
         {excludedLabel ? (<span className='message-excluded'>{excludedLabel}</span>) : null}
@@ -79,16 +81,16 @@ const plotMessage = (currentUser : string) => (message : any) => {
         <span className='message-content'>{message.content}</span><br/>
         <span className='message-hour'>{time.format('HH:mm')} | </span>
         <span className='message-date'>{time.format('MMM DD, YYYY')}</span>
-      </li>
+      </div>
     )
   }
 
   return (
-    <li className={'status-message'} key={message._id}>
+    <div className={'status-message'} key={message._id}>
       <span className='message-content'>{message.content}</span><br/>
       <span className='message-hour'>{time.format('HH:mm')} | </span>
       <span className='message-date'>{time.format('MMM DD, YYYY')}</span>
-    </li>
+    </div>
   )
 }
 
@@ -98,11 +100,19 @@ interface IChannelMessages {
 }
 
 const ChannelMessages : React.FC<IChannelMessages> = ({ messages, user }) => {
-  return (
-    <div className='chat-content'>
-      <ul>{messages.map(plotMessage(user))}</ul>
-    </div>
-  )
+  if (messages && messages.length) {
+    return (
+      <div className='chat-content'>
+        <ScrollableFeed>
+          {messages.map(plotMessage(user))}
+        </ScrollableFeed>
+      </div>
+    )
+  } else {
+    return (
+      <Spinner name='circle' color='white' className='no-border no-outline'/>
+    )
+  }
 }
 
 const Chat : React.FC<IChat> = ({ exitChat }) => {
