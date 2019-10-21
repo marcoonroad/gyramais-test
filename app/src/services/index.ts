@@ -15,8 +15,8 @@ const enter = async (nickname : string) => {
   return session
 }
 
-const isActive = async () => {
-  const nickname = localStorage.getItem('nickname')
+const isActive = async (inputNickname : string | null | undefined) => {
+  const nickname = inputNickname || localStorage.getItem('nickname')
 
   if (!nickname) {
     return false

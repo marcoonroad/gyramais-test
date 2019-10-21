@@ -17,6 +17,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "android:off": "adb reverse --remove-all",
+    "android:on": "yarn run android:off && adb reverse tcp:4000 tcp:3000",
+    "android:open": "adb shell am start -a android.intent.action.VIEW -d",
+    "android:open:local": "yarn run android:open http://localhost:4000",
+    "android:open:site": "yarn run android:open https://gyraplus-test-chat-app.surge.sh",
     "predeploy": "yarn run build && mv build/index.html build/200.html",
     "deploy": "surge --project ./build --domain https://gyraplus-test-chat-app.surge.sh"
   },

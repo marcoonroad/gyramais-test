@@ -3,24 +3,30 @@
   flex-direction: column;
 */
 
-html {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-body {
-  background-color: gray;
+html, body {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100) !important;
+  overflow: hidden;
 }
 
 .app-container {
   width: 100%;
   margin: 0 auto;
   display: block;
-  max-height: 100vh;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100) !important;
   text-align: center;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  overflow: hidden;
+}
+
+.app-container-login {
   background-color: white;
+}
+
+.app-container-chat {
+  background-color: gray;
 }
 
